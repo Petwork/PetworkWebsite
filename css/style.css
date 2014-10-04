@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+
 body, html{
 	padding:0; 
 	margin:0;
@@ -220,6 +222,20 @@ h5{
 body{
 	padding-top: 70px;
 }
+a{	
+	
+	-webkit-transition: 0.5s ease;
+	-moz-transition: 0.5s ease;
+	-ms-transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	transition: 0.5s ease;
+}
+
+a:hover {
+	border-width: 0;
+	border-color: rgba(0, 0, 0, 0.5);
+	border-style: solid;
+}
 
 #navGlyph{
 	font-size:1.3em;
@@ -234,19 +250,11 @@ body{
 }
 
 .homeText{
-	color: red;
+	color: #F27935;
 }
 
 .homeText:hover{
 	text-decoration: none;
+	color:#FDE3A7	
 }
 
-.pawButton:hover{
-	box-shadow: 0 8px #000;
-	top: 4px;
-};
-
-.pawButton:active{
-	box-shadow: 0 0 #000;
-	top: 12px;
-}
