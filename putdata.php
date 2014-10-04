@@ -3,7 +3,7 @@ $username = "root";
 $password = "root"; 
 $database = "tindog"; 
 
-$owner = $_POST["owner"];
+
 $pet_age = $_POST["pet_age"];
 $pet_name = $_POST["pet_name"];
 $pet_type = $_POST["pet_type"];
@@ -32,7 +32,7 @@ mysql_select_db($database);
 
 #$query = "CREATE TABLE contacts (id int(6) NOT NULL auto_increment,first varchar(15) NOT NULL,last varchar(15) NOT NULL,phone varchar(20) NOT NULL,mobile varchar(20) NOT NULL,fax varchar(20) NOT NULL,email varchar(30) NOT NULL,web varchar(30) NOT NULL,PRIMARY KEY (id),UNIQUE id (id),KEY id_2 (id))";
 
-$query = "INSERT INTO user VALUES('','$pet_name','$pet_age', '','','$owner','$pet_breed','$pet_type', '$comments', '$contact', '$pet_image', '$owner_image')";
+$query = "INSERT INTO user VALUES('','$pet_name','$pet_age', '','','','$pet_breed','$pet_type', '$comments', '$contact', '$pet_image', '$owner_image')";
 
 $success = mysql_query($query);
 
