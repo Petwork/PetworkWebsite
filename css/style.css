@@ -216,6 +216,7 @@ h5{
 
 /* ------------------------------------------------------------------------------------------------------------------------------  */
 
+
 body{
 	padding-top: 70px;
 }
@@ -231,3 +232,16 @@ body{
 #mainContent{
 	height: 100%;
 }
+
+a.homeText{
+	color: red;
+}
+
+a.homeText:hover{
+	text-decoration: none;
+}
+
+a.pawButton:hover{
+	border-color:black;
+	border:10px;
+};
