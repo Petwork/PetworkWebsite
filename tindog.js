@@ -6,7 +6,7 @@ var img_array = [ 'url(dog1.jpg)', 'url(dog2.jpg)', 'url(dog3.jpg)', 'url(dog4.j
 var name_array = ['Coco', 'Leo', 'Simba', 'Boxer', 'Ruby', 'Doge'];
 var age_array = [2 , 3, 1, 5, 7, 2]; 
 var current_array=[0,1,2];
-var info_array = ['']
+
 /*----------------------------IMAGE AND NAME GENERATION-------------------------------------------*/	
 	function initial_image(){
 		

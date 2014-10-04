@@ -36,6 +36,7 @@ section{
 	border-radius: 200px;
 	
 }
+
 .container{
 	padding:0;
 	margin:0;
@@ -44,15 +45,6 @@ section{
 
 }
 
-#info{
-	display: none;
-	width:400px;
-	height:400px;
-	border-radius: 200px;
-	margin-right:20px;
-	background-color: rgba(0,0,0,0.6);
-
-}
 
 
 #f2{
@@ -65,6 +57,7 @@ section{
 	background-position:center;
 	background-repeat: no-repeat;
 }
+
 #f1{
 	width:200px;
 	height:200px;
@@ -140,7 +133,6 @@ h5{
 	text-decoration: none;
 }
 
-
 .menu{
 	background-color:transparent;
 	border:none;
@@ -179,6 +171,8 @@ h5{
 	overflow: scroll;
 
 }
+
+
 
 #menu-drop ul li{
 	color:black;
@@ -219,24 +213,35 @@ h5{
 #prev{
 	visibility: hidden;
 }
-.form-control{
-	width: 50%
-}
-.noNavBody{
-	margin-right: auto;
-	margin-left: auto;
-	width: 50%
-}
-#info ul li{
-	float: left;
-	color:white;
-	margin-left:50px;
-	
-}
 
-#info ul{
-	margin-left:30px;
-	margin-top: 100px;
-}
+/* ------------------------------------------------------------------------------------------------------------------------------  */
 
 
+body{
+	padding-top: 70px;
+}
+
+#navGlyph{
+	font-size:1.3em;
+}
+
+#siteName{
+	font-size:1.8em;
+}
+
+#mainContent{
+	height: 100%;
+}
+
+a.homeText{
+	color: red;
+}
+
+a.homeText:hover{
+	text-decoration: none;
+}
+
+a.pawButton:hover{
+	border-color:black;
+	border:10px;
+};
