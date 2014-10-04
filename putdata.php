@@ -44,4 +44,5 @@ move_uploaded_file($_FILES['user_image']['tmp_name'], $target.$_FILES['user_imag
 move_uploaded_file($_FILES['pet_image']['tmp_name'], $target.$_FILES['pet_image']['name']);
  
 mysql_close(); 
+header("Location:/home.html");
 ?>
