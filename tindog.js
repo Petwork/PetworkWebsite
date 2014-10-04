@@ -1,11 +1,52 @@
 
 $(document).ready(function(){
 
+$.ajaxSetup({async:false});
 
-var img_array = [ 'url(dog1.jpg)', 'url(dog2.jpg)', 'url(dog3.jpg)', 'url(dog4.jpg)',  'url(dog5.jpg)', 'url(dog6.jpg)']; 
-var name_array = ['Coco', 'Leo', 'Simba', 'Boxer', 'Ruby', 'Doge'];
-var age_array = [2 , 3, 1, 5, 7, 2]; 
+var records, n_fields;
+var current_ids = [];
+
+var img_array = new Array();  
+var name_array = new Array(); 
+var age_array = new Array(); 
 var current_array=[0,1,2];
+
+ 
+
+
+/*----------------------------FETCHING USERS ON NETWORK ------------------------------------------*/
+
+function fetch(){
+		
+		$.get("fetchpets.php",function(data,status){
+			 records = JSON.parse(data); 
+			 n_records = records.length;		//Number of Pets
+		});
+
+	}
+
+	fetch(); 
+
+	/*console.log(records); 
+	console.log("image 1:"+records[0].pet_image); 
+	console.log("image 2:"+records[1].pet_image); */
+
+	for(var j = 0; j < records.length; j++){
+		img_array.push("url(images/"+records[j].pet_image+")"); 
+		name_array.push(records[j].pet_name); 
+		age_array.push(records[j].pet_age); 
+	}
+
+	/*for(var j = 0; j < records.length; j++){
+		console.log("Image"+j+":"+img_array[j]); 
+	}*/
+	console.log(img_array);
+
+
+
+	
+
+/*------------------------------------------------------------------------------------------------*/
 
 /*----------------------------IMAGE AND NAME GENERATION-------------------------------------------*/	
 	function initial_image(){
@@ -72,7 +113,7 @@ var current_array=[0,1,2];
 						}
 						else{
 							address+=(result.address_components[i]['short_name'] + ', '); 
-							console.log(address);
+							//console.log(address);
 						}
 
 					}

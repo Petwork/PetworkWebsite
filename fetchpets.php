@@ -27,7 +27,8 @@ for($i=0; $i < $n_rows; $i++)
     $row['pet_breed']= mysql_result($result, $i, "dog_breed");
     $row['pet_type'] = mysql_result($result, $i, "dog_type");
     $row['comments'] = mysql_result($result, $i, "comments");
-    $row['contact'] = mysql_result($result, $i, "contact");  
+    $row['contact'] = mysql_result($result, $i, "contact"); 
+    $row['owner_image']= mysql_result($result, $i, "owner_image"); 
 
     array_push($return_arr,$row);
 }
