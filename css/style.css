@@ -233,15 +233,20 @@ body{
 	height: 100%;
 }
 
-a.homeText{
+.homeText{
 	color: red;
 }
 
-a.homeText:hover{
+.homeText:hover{
 	text-decoration: none;
 }
 
-a.pawButton:hover{
-	border-color:black;
-	border:10px;
+.pawButton:hover{
+	box-shadow: 0 8px #000;
+	top: 4px;
 };
+
+.pawButton:active{
+	box-shadow: 0 0 #000;
+	top: 12px;
+}
