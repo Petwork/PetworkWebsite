@@ -46,36 +46,46 @@
 	<h1 class="text-center" style ="color:#C8F7C5;font-family:"Montserrat"; font-weight:bold;  font-size:20;  text-decoration:underline; ">Getting Started</h1>
 
 
+
 <form role="form" style="width:100%;">
+
+<form action="putdata.php" method="post" style="width:100%;" enctype="multipart/form-data">
+
    <div class="form-group" style="padding-bottom:50px;">
    
          	<label for="AgePet" style=" font-size:18px; color:#A2DED0">Pet Age</label>
-      <input type="text" class="form-control" id="PetAge"
+      <input type="text" class="form-control" name="pet_age" id="PetAge"
          placeholder="Enter Pet's Age">
          	<br>
          <label for="PetName" style=" font-size:18px; color:#A2DED0">Pet Name</label>
-      <input type="text" class="form-control" id="PetName"
+      <input type="text" class="form-control" name="pet_name" id="PetName"
          placeholder="Enter Pet's Name">
    			<br>
-   			<label for="PetType" style=" font-size:18px; color:#A2DED0">What Animal is your pet?</label>
-      <input type="text" class="form-control" id="PetType"
+   			<label for="PetType" style=" font-size:18px; color:#A2DED0">What animal is your pet?</label>
+      <input type="text" class="form-control" name="pet_type" id="PetType"
          placeholder="Enter what animal your pet is">
 			<br>
 <label for="breed" style=" font-size:18px; color:#A2DED0">Breed</label>
-      <input type="text" class="form-control" id="Breed"
+      <input type="text" class="form-control" name="pet_breed" id="Breed"
          placeholder="Enter Breed of Pet">
 			<br>
+
+      <label for="comments" style=" font-size:18px; color:#A2DED0">Additional Information</label>
+      <input type="text" class="form-control" name="comments" id="comments"
+         placeholder="Enter additional information about your pet">
+      <br>
+
          <label for="Contact" style=" font-size:18px; color:#A2DED0">Contact Information</label>
-      <input type="text" class="form-control" id="ContactInfo"
+      <input type="text" class="form-control" name="contact" id="ContactInfo"
          placeholder="Enter Contact Info(Phone Number/Email-ID)">
          <br>
    
   
       <label for="inputfile" style=" font-size:18px; color:#A2DED0">Upload Image of User</label>
-      <input style="color:white;" type="file" id="inputfile">
+      <input style="color:white;" name="user_image" type="file" id="inputfile1">
       <br>
       <label for="inputfile" style=" font-size:18px; color:#A2DED0">Upload Image of Pet</label>
-      <input style="color:white;" type="file" id="inputfile">
+      <input style="color:white;" name="pet_image" type="file" id="inputfile2">
       
    </div>
    <button type="submit" class="btn btn-primary btn-lg">Submit</button>

@@ -1,17 +1,68 @@
 
 $(document).ready(function(){
 
+$.ajaxSetup({async:false});
 
-var img_array = [ 'url(dog1.jpg)', 'url(dog2.jpg)', 'url(dog3.jpg)', 'url(dog4.jpg)',  'url(dog5.jpg)', 'url(dog6.jpg)']; 
-var name_array = ['Coco', 'Leo', 'Simba', 'Boxer', 'Ruby', 'Doge'];
-var age_array = [2 , 3, 1, 5, 7, 2]; 
+var records, n_fields;
+var current_ids = [];
+
+var img_array = new Array();  
+var name_array = new Array(); 
+var age_array = new Array(); 
 var current_array=[0,1,2];
+
+ 
+
+
+/*----------------------------FETCHING USERS ON NETWORK ------------------------------------------*/
+
+function fetch(){
+		
+		$.get("fetchpets.php",function(data,status){
+			 records = JSON.parse(data); 
+			 n_records = records.length;		//Number of Pets
+		});
+
+	}
+
+	fetch(); 
+
+	/*console.log(records); 
+	console.log("image 1:"+records[0].pet_image); 
+	console.log("image 2:"+records[1].pet_image); */
+
+	for(var j = 0; j < records.length; j++){
+		img_array.push("url(images/"+records[j].pet_image+")"); 
+		name_array.push(records[j].pet_name); 
+		age_array.push(records[j].pet_age); 
+	}
+
+	/*for(var j = 0; j < records.length; j++){
+		console.log("Image"+j+":"+img_array[j]); 
+	}*/
+	//console.log(img_array);
+
+
+
+
+	
+
+/*------------------------------------------------------------------------------------------------*/
 
 /*----------------------------IMAGE AND NAME GENERATION-------------------------------------------*/	
 	function initial_image(){
 		
 			var count = 1; 
 			while(count<=3){
+				if(count==2){
+					document.getElementById('pet_name').innerHTML = "<span style='color:lightgray;'>Pet's Name:</span> &nbsp" +  name_array[current_array[count-1]]; 
+					document.getElementById('pet_type').innerHTML = "<span style='color:lightgray;'>Pet Type: </span> &nbsp" + records[current_array[count-1]].pet_type;
+					document.getElementById('pet_breed').innerHTML = "<span style='color:lightgray;'>Pet's Breed:</span> &nbsp" + records[current_array[count-1]].pet_breed;
+					document.getElementById('pet_age').innerHTML = "<span style='color:lightgray;'>Pet's Age:</span> &nbsp" +  records[current_array[count-1]].pet_age;
+					document.getElementById('owner_name').innerHTML = "<span style='color:lightgray;'> Owner's Name: </span> &nbsp";
+					document.getElementById('owner_contact').innerHTML = "<span style='color:lightgray;'>Contact: </span> &nbsp" + records[current_array[count-1]].contact;
+					document.getElementById('comments').innerHTML = "<span style='color:lightgray;'>Additional Info.:</span> &nbsp" +  records[current_array[count-1]].comments;
+				}
 				document.getElementById('f'+ count).style.backgroundImage = img_array[current_array[count-1]];
 				document.getElementById('name'+ count).innerHTML = name_array[current_array[count-1]] + ', ' + age_array[current_array[count-1]];
 			
@@ -25,6 +76,16 @@ var current_array=[0,1,2];
 		
 			var count = 1; 
 			while(count<=3){
+				if(count==2){
+					document.getElementById('pet_name').innerHTML = "<span style='color:lightgray;'>Pet's Name:</span> &nbsp" +  name_array[current_array[count-1]+1]; 
+					document.getElementById('pet_type').innerHTML = "<span style='color:lightgray;'>Pet Type: </span> &nbsp" + records[current_array[count-1]+1].pet_type;
+					document.getElementById('pet_breed').innerHTML = "<span style='color:lightgray;'>Pet's Breed:</span> &nbsp" + records[current_array[count-1]+1].pet_breed;
+					document.getElementById('pet_age').innerHTML = "<span style='color:lightgray;'>Pet's Age:</span> &nbsp" +  records[current_array[count-1]+1].pet_age;
+					document.getElementById('owner_name').innerHTML = "<span style='color:lightgray;'> Owner's Name: </span> &nbsp";
+					document.getElementById('owner_contact').innerHTML = "<span style='color:lightgray;'>Contact: </span> &nbsp" + records[current_array[count-1]+1].contact;
+					document.getElementById('comments').innerHTML = "<span style='color:lightgray;'>Additional Info.:</span> &nbsp" +  records[current_array[count-1]+1].comments;
+				}
+				
 				document.getElementById('f'+ count).style.backgroundImage = img_array[current_array[count-1]+1];
 				document.getElementById('name'+ count).innerHTML = name_array[current_array[count-1]+1] + ', ' + age_array[current_array[count-1]+1];
 				
@@ -39,6 +100,15 @@ var current_array=[0,1,2];
 	function prev_image(){
 		var count = 1; 
 			while(count<=3){
+				if(count==2){
+					document.getElementById('pet_name').innerHTML = "<span style='color:lightgray;'>Pet's Name:</span> &nbsp" +  name_array[current_array[count-1]-1]; 
+					document.getElementById('pet_type').innerHTML = "<span style='color:lightgray;'>Pet Type: </span> &nbsp" + records[current_array[count-1]-1].pet_type;
+					document.getElementById('pet_breed').innerHTML = "<span style='color:lightgray;'>Pet's Breed:</span> &nbsp" + records[current_array[count-1]-1].pet_breed;
+					document.getElementById('pet_age').innerHTML = "<span style='color:lightgray;'>Pet's Age:</span> &nbsp" +  records[current_array[count-1]-1].pet_age;
+					document.getElementById('owner_name').innerHTML = "<span style='color:lightgray;'> Owner's Name: </span> &nbsp";
+					document.getElementById('owner_contact').innerHTML = "<span style='color:lightgray;'>Contact: </span> &nbsp" + records[current_array[count-1]-1].contact;
+					document.getElementById('comments').innerHTML = "<span style='color:lightgray;'>Additional Info.:</span> &nbsp" +  records[current_array[count-1]-1].comments;
+				}
 				document.getElementById('f'+ count).style.backgroundImage = img_array[current_array[count-1]-1];
 				document.getElementById('name'+ count).innerHTML = name_array[current_array[count-1]-1] + ', ' + age_array[current_array[count-1]-1];
 			
@@ -72,7 +142,7 @@ var current_array=[0,1,2];
 						}
 						else{
 							address+=(result.address_components[i]['short_name'] + ', '); 
-							console.log(address);
+							//console.log(address);
 						}
 
 					}
@@ -110,7 +180,7 @@ var current_array=[0,1,2];
 		next_image(); 
 	 	$("#prev").css("visibility","visible"); 
 
-	 	if(current_array[2]=== 5){
+	 	if(current_array[2]=== records.length){
 	 		$("#next").css("visibility","hidden");
 	 	}
 	 	$("#f2").css("display","block"); 
