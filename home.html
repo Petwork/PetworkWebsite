@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  	<!--Begin NAVBAR -->
+    <div class="navbar navbar-default navbar-fixed-top"  role="navigation" >
+        <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#MainNavbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a id ="siteName" class="navbar-brand" href="home.html">Petwork</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse nav-right" id="MainNavbar">
+          <ul class="nav navbar-nav navbar-right">
+      		<li class = "dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" id="navGlyph"><span class="glyphicon glyphicon-comment"></span></a>
+				<ul class="dropdown-menu" role="menu" id="notifications">
+              	</ul>
+      		</li>
+      		<li><a href="settings.html"><span class="glyphicon glyphicon-cog" id="navGlyph"></span></a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!--End NAVBAR-->
+
+    <!--Begin Main Content-->
+    <div id ="mainContent" class="container">
+    	<div class="row" style="margin-top:10%;">
+		<div class="col-md-4 col-xs-12">
+			<div><a href="">
+				<img class ="pull-left" src="paw.gif" style="border-radius:100%; height:35%; width:35%;"/>
+				<h1 style="vertical-align: middle;">Find Care</h1>
+			</a></div>
+		</div>
+		<div class="col-md-4 col-xs-12">
+			<div><a href="">
+				<img class ="pull-left" src="paw.gif" style="border-radius:100%; height:35%; width:35%;"/>
+				<h1>Find Pet to Care For</h1>
+			</a></div>
+		</div>
+		<div class="col-md-4 col-xs-12" style="display: table-cell;" >
+			<div style="vertical-align: middle;"><a href="">
+				<img class ="pull-left" src="paw.gif" style="border-radius:100%; height:35%; width:35%;"/>
+				<h1>Calendar</h1>
+			</a></div>
+		</div>
+		</div>
+    </div>
+    <!--End Main Content-->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
