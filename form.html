@@ -3,16 +3,15 @@
 <head>
 <title>FormForPetWorld</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="/Users/shreedhamija/Documents/Developer/bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="/Users/shreedhamija/Documents/Developer/bootstrap-3.2.0-dist/css/bootstrap-theme.min.css" rel="stylesheet">
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 <link href="tindog.css" rel = "stylesheet">
-<body background= "FormBackground.jpg">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script src="js/bootstrap.js"></script>
+<body >
+  
 
-<!--<section id="section1">
-				<div class="container" style="width:100%; height:50px;background-color:#d35400; box-shadow:1px 1px 8px black;">
-						<h1 style="display:inline-block;color:white; font-weight:bold;text-align:center;margin-bottom:80px; margin-left:45%;"> . Petwork . </h1> 
 
-</div>-->
 <!--Begin NAVBAR -->
     <div class="navbar navbar-default navbar-fixed-top"  role="navigation" >
         <div class="container-fluid">
@@ -40,56 +39,47 @@
       </div><!-- /.container-fluid -->
     </div>
     <!--End NAVBAR-->
+<section style="height:100%;width:100%;background:url(FormBackground.jpg);background-size:100% 100%;">
+<section class="overlay-body" style="padding-bottom:50px;height:100%;width:100%;background-color:rgba(0,0,0,0.6); margin-top:50px; ">
+<div class="noNavBody" >
+	<h1 class="text-center" style ="color:#5C97BF;font-family:Corbert; font-weight:bold;  font-size:20; color:white; text-decoration:underline; ">ABOUT YOURSELF</h1>
 
-<div class="noNavBody">
-	<h1 style ="color:#5C97BF;font-family:Corbert; font-weight:bold; margin-top:80px; font-size: 60px;">TELL US ABOUT YOURSELF!</h1>
 
-
-<form role="form">
-   <div class="form-group">
-     <!-- <label for="firstNameUser" style=" font-size:20px; color:#A2DED0">User First Name</label>
-      <input type="text" class="form-control" id="firstNameUser"
-         placeholder="Enter User's First Name">
-         	<br>
-         <label for="lastNameUser" style=" font-size:20px; color:#A2DED0">User Last Name</label>
-      <input type="text" class="form-control" id="lastNameUser"
-         placeholder="Enter User's Last Name">
-         	<br>
-         	<label for="AgeUser" style=" font-size:20px; color:#A2DED0">User Age</label>
-      <input type="text" class="form-control" id="UserAge"
-         placeholder="Enter User's Age">
-         	<br>-->
-         	<label for="AgePet" style=" font-size:20px; color:#A2DED0">Pet Age</label>
+<form role="form" style="width:100%;">
+   <div class="form-group style="padding-bottom:50px;">
+   
+         	<label for="AgePet" style=" font-size:18px; color:#A2DED0">Pet Age</label>
       <input type="text" class="form-control" id="PetAge"
          placeholder="Enter Pet's Age">
          	<br>
-         <label for="PetName" style=" font-size:20px; color:#A2DED0">Pet Name</label>
+         <label for="PetName" style=" font-size:18px; color:#A2DED0">Pet Name</label>
       <input type="text" class="form-control" id="PetName"
          placeholder="Enter Pet's Name">
    			<br>
-   			<label for="PetType" style=" font-size:20px; color:#A2DED0">What Animal is your pet?</label>
+   			<label for="PetType" style=" font-size:18px; color:#A2DED0">What Animal is your pet?</label>
       <input type="text" class="form-control" id="PetType"
          placeholder="Enter what animal your pet is">
 			<br>
-<label for="breed" style=" font-size:20px; color:#A2DED0">Breed</label>
+<label for="breed" style=" font-size:18px; color:#A2DED0">Breed</label>
       <input type="text" class="form-control" id="Breed"
          placeholder="Enter Breed of Pet">
 			<br>
-         <label for="Contact" style=" font-size:20px; color:#A2DED0">Contact Information</label>
+         <label for="Contact" style=" font-size:18px; color:#A2DED0">Contact Information</label>
       <input type="text" class="form-control" id="ContactInfo"
          placeholder="Enter Contact Info(Phone Number/Email-ID)">
          <br>
-   </div>
-   <div class="form-group">
-      <label for="inputfile" style=" font-size:20px; color:#A2DED0">Upload Image of User</label>
-      <input type="file" id="inputfile">
+   
+  
+      <label for="inputfile" style=" font-size:18px; color:#A2DED0">Upload Image of User</label>
+      <input style="color:white;" type="file" id="inputfile">
       <br>
-      <label for="inputfile" style=" font-size:20px; color:#A2DED0">Upload Image of Pet</label>
-      <input type="file" id="inputfile">
+      <label for="inputfile" style=" font-size:18px; color:#A2DED0">Upload Image of Pet</label>
+      <input style="color:white;" type="file" id="inputfile">
       
    </div>
    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
 </form>
 </div>
-
+</section>
+</section>
 </body>
