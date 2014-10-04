@@ -40,7 +40,8 @@ function fetch(){
 	/*for(var j = 0; j < records.length; j++){
 		console.log("Image"+j+":"+img_array[j]); 
 	}*/
-	console.log(img_array);
+	//console.log(img_array);
+
 
 
 
@@ -53,6 +54,15 @@ function fetch(){
 		
 			var count = 1; 
 			while(count<=3){
+				if(count==2){
+					document.getElementById('pet_name').innerHTML = "<span style='color:lightgray;'>Pet's Name:</span> &nbsp" +  name_array[current_array[count-1]]; 
+					document.getElementById('pet_type').innerHTML = "<span style='color:lightgray;'>Pet Type: </span> &nbsp" + records[current_array[count-1]].pet_type;
+					document.getElementById('pet_breed').innerHTML = "<span style='color:lightgray;'>Pet's Breed:</span> &nbsp" + records[current_array[count-1]].pet_breed;
+					document.getElementById('pet_age').innerHTML = "<span style='color:lightgray;'>Pet's Age:</span> &nbsp" +  records[current_array[count-1]].pet_age;
+					document.getElementById('owner_name').innerHTML = "<span style='color:lightgray;'> Owner's Name: </span> &nbsp";
+					document.getElementById('owner_contact').innerHTML = "<span style='color:lightgray;'>Contact: </span> &nbsp" + records[current_array[count-1]].contact;
+					document.getElementById('comments').innerHTML = "<span style='color:lightgray;'>Additional Info.:</span> &nbsp" +  records[current_array[count-1]].comments;
+				}
 				document.getElementById('f'+ count).style.backgroundImage = img_array[current_array[count-1]];
 				document.getElementById('name'+ count).innerHTML = name_array[current_array[count-1]] + ', ' + age_array[current_array[count-1]];
 			
@@ -66,6 +76,16 @@ function fetch(){
 		
 			var count = 1; 
 			while(count<=3){
+				if(count==2){
+					document.getElementById('pet_name').innerHTML = "<span style='color:lightgray;'>Pet's Name:</span> &nbsp" +  name_array[current_array[count-1]+1]; 
+					document.getElementById('pet_type').innerHTML = "<span style='color:lightgray;'>Pet Type: </span> &nbsp" + records[current_array[count-1]+1].pet_type;
+					document.getElementById('pet_breed').innerHTML = "<span style='color:lightgray;'>Pet's Breed:</span> &nbsp" + records[current_array[count-1]+1].pet_breed;
+					document.getElementById('pet_age').innerHTML = "<span style='color:lightgray;'>Pet's Age:</span> &nbsp" +  records[current_array[count-1]+1].pet_age;
+					document.getElementById('owner_name').innerHTML = "<span style='color:lightgray;'> Owner's Name: </span> &nbsp";
+					document.getElementById('owner_contact').innerHTML = "<span style='color:lightgray;'>Contact: </span> &nbsp" + records[current_array[count-1]+1].contact;
+					document.getElementById('comments').innerHTML = "<span style='color:lightgray;'>Additional Info.:</span> &nbsp" +  records[current_array[count-1]+1].comments;
+				}
+				
 				document.getElementById('f'+ count).style.backgroundImage = img_array[current_array[count-1]+1];
 				document.getElementById('name'+ count).innerHTML = name_array[current_array[count-1]+1] + ', ' + age_array[current_array[count-1]+1];
 				
@@ -80,6 +100,15 @@ function fetch(){
 	function prev_image(){
 		var count = 1; 
 			while(count<=3){
+				if(count==2){
+					document.getElementById('pet_name').innerHTML = "<span style='color:lightgray;'>Pet's Name:</span> &nbsp" +  name_array[current_array[count-1]-1]; 
+					document.getElementById('pet_type').innerHTML = "<span style='color:lightgray;'>Pet Type: </span> &nbsp" + records[current_array[count-1]-1].pet_type;
+					document.getElementById('pet_breed').innerHTML = "<span style='color:lightgray;'>Pet's Breed:</span> &nbsp" + records[current_array[count-1]-1].pet_breed;
+					document.getElementById('pet_age').innerHTML = "<span style='color:lightgray;'>Pet's Age:</span> &nbsp" +  records[current_array[count-1]-1].pet_age;
+					document.getElementById('owner_name').innerHTML = "<span style='color:lightgray;'> Owner's Name: </span> &nbsp";
+					document.getElementById('owner_contact').innerHTML = "<span style='color:lightgray;'>Contact: </span> &nbsp" + records[current_array[count-1]-1].contact;
+					document.getElementById('comments').innerHTML = "<span style='color:lightgray;'>Additional Info.:</span> &nbsp" +  records[current_array[count-1]-1].comments;
+				}
 				document.getElementById('f'+ count).style.backgroundImage = img_array[current_array[count-1]-1];
 				document.getElementById('name'+ count).innerHTML = name_array[current_array[count-1]-1] + ', ' + age_array[current_array[count-1]-1];
 			
@@ -151,7 +180,7 @@ function fetch(){
 		next_image(); 
 	 	$("#prev").css("visibility","visible"); 
 
-	 	if(current_array[2]=== 5){
+	 	if(current_array[2]=== records.length){
 	 		$("#next").css("visibility","hidden");
 	 	}
 	 	$("#f2").css("display","block"); 
