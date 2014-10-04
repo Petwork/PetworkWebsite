@@ -6,6 +6,7 @@ var img_array = [ 'url(dog1.jpg)', 'url(dog2.jpg)', 'url(dog3.jpg)', 'url(dog4.j
 var name_array = ['Coco', 'Leo', 'Simba', 'Boxer', 'Ruby', 'Doge'];
 var age_array = [2 , 3, 1, 5, 7, 2]; 
 var current_array=[0,1,2];
+var info_array = ['']
 /*----------------------------IMAGE AND NAME GENERATION-------------------------------------------*/	
 	function initial_image(){
 		
@@ -112,6 +113,8 @@ var current_array=[0,1,2];
 	 	if(current_array[2]=== 5){
 	 		$("#next").css("visibility","hidden");
 	 	}
+	 	$("#f2").css("display","block"); 
+			$("#info").css("display","none"); 
 	 	
 	});
 
@@ -125,8 +128,25 @@ var current_array=[0,1,2];
 	 		$("#prev").css("visibility","visible"); 
 	 	} 
 	 	$("#next").css("visibility","visible");
+	 	$("#f2").css("display","block"); 
+			$("#info").css("display","none"); 
 	});
 
+	var info_flag = 2; 
+
+	$("#info-button").click(function(){
+		if(info_flag%2==0){
+			$("#f2").css("display","none"); 
+			$("#info").css("display","block"); 
+			info_flag++;
+		}
+
+		else{
+			$("#f2").css("display","block"); 
+			$("#info").css("display","none"); 
+			info_flag++;
+		}
+	});
 
 				
 });
