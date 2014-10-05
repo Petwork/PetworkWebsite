@@ -11,7 +11,7 @@ var name_array = new Array();
 var age_array = new Array(); 
 var current_array=[0,1,2];
 
- 
+var location=""; 
 
 
 /*----------------------------FETCHING USERS ON NETWORK ------------------------------------------*/
@@ -143,13 +143,23 @@ function fetch(){
 				
 					var address =""; 
 					for(var i = 0, len=result.address_components.length; i<len; i++){
+						if(i>1){
+							 
+							if(i === len-1){
+							location+=(result.address_components[i]['short_name']); 
+							}
+							else{
+								location += (result.address_components[i]['short_name'])+" ,";
+							}
+						}
 						if(i === len-1){
 							address+=(result.address_components[i]['short_name']); 
 						}
 						else{
 							address+=(result.address_components[i]['short_name'] + ', '); 
-							//console.log(address);
+							
 						}
+						//console.log(location);
 
 					}
 					$("#location").text(""); 
@@ -232,6 +242,9 @@ function fetch(){
 		$("#tooltip").css("visibility","hidden"); 
 	});
 
+	$("#update-loc").click(function(){
+		$.post()
+	});
 				
 });
 	

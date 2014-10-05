@@ -69,7 +69,7 @@
 		      <div class="col-lg-6 col-md-6 col-xs-6" style="display: inline-block; height 100%; vertical-align: middle;">
 			     <div>
 				      
-              <a href="/discover-people.html" class ="pawButton">
+              <a href="/discover-people.php" class ="pawButton">
 				      <img class = "pawButton" class ="pull-left" src="paw.gif" style="border-radius:50%; height:35%; width:35%;" style="display: inline-block; height 100%; vertical-align: middle;"/>
 				      </a>
 				      <a href="" class ="homeText">
@@ -79,7 +79,7 @@
 		      </div>
 		    <div class="col-lg-6 col-md-6 col-xs-6" style="display: inline-block; height 100%; vertical-align: middle;">
 			   <div>
-				<a href="/discover-pets.html" class ="pawButton">
+				<a href="/discover-pets.php" class ="pawButton">
 				<img class = "pawButton" class ="pull-left" src="paw.gif" style="border-radius:50%; height:35%; width:35%;" style="display: inline-block; height 100%; vertical-align: middle;"style="display: inline-block; height 100%; vertical-align: middle;"/>
 				</a>
 				<a href="" class ="homeText"><h1 style="display: inline-block; vertical-align: middle; font-family: Corbert-Regular;">Find Pet to Care For</h1></a>

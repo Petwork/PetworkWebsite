@@ -9,8 +9,8 @@
 		<section id="section1">
 				<div class="container" style="width:100%; height:50px;background-color:#d35400; box-shadow:1px 1px 8px black;">
 
-						<a id="back" href="/home.html" style="margin-left:20px;"> Back </a> 
-						<h1 style="display:inline-block;color:white; font-weight:bold;text-align:center;margin-bottom:80px; margin-left:45%;"> Petwork  <span style="font-size:14px; color:lightgray; font-weight:normal;"> Care for pets </span></h1> 
+						<a id="back" href="/home.php" style="margin-left:20px;"> Back </a> 
+						<h1 style="display:inline-block;color:white; font-weight:bold;text-align:center;margin-bottom:80px; margin-left:45%;"> Petwork <span style="font-size:14px; color:lightgray; font-weight:normal;"> Find Care </span> </h1> 
 						
 						<span style="float:right;">
 							<button type="button" id="menu-drop-but" class="btn btn-default btn-lg menu">
@@ -44,20 +44,14 @@
 						 
 						
 				</div>
-				<div style="width:auto;height:auto;text-align:center;">
-				<div id="location" style="display:inline-block;text-align:center;width:auto;height:auto; margin-top:20px;font-size:14px; color:black;"> Calculating current location . . .  </div>
 
-				<div style="display:inline-block;" id="update-loc"><button type="button" id="update-loc" class="btn btn-default btn-lg update center-block" style="clear:both;margin-top:0px;height:40px;width:40px;background-color:rgba(0,0,0,0);margin-bottom:-10px;">
-						  	<span class="glyphicon glyphicon-arrow-up" style="font-size:20px; "></span> 
-						  	<span id="tooltip" style="font-size:10px;background-color:rgba(255,255,255,0.5);padding:2px;border-radius:4px;">Upload current location</span>
-						</button>
-				</div>
-			</div>
+				<div id="location" style="text-align:center;width:auto;height:auto; margin-top:20px;font-size:14px; color:black;"> Calculating current location . . .  </div>
+			
 				<div class="container" style="width:1060px;padding-top:40px;">
 					<ul>
 						<li>
 						<button type="button" id="prev" class="btn btn-default btn-lg control" style="margin-right:50px;">
-						  	<span class="glyphicon glyphicon-chevron-left" style="background-color:red;"></span> 
+						  	<span class="glyphicon glyphicon-chevron-left"></span> 
 						</button>
 					</li>
 
@@ -75,19 +69,15 @@
 						<div class="face-cont" id="f2"></div>
 							<div class="face-cont text-center" id="info" > 
 								<ul style="line-height:2em;">
-									<li id="pet_name"> Pet's Name: </li>
+									<li id="owner_name"> Name: </li>
 									<br>
-									<li id="pet_type"> Pet Type: </li>
+									<li id="owner_location"> Location: </li>
 									<br>
-									<li id="pet_breed"> Pet's Breed: </li>
+									<li id="preferences"> Pet Preferences: </li>
 									<br>
-									<li id="pet_age"> Pet's Age: </li>
-									<br>
-									<li id="owner_name"> Owner name: </li>
+									<li id="experience"> Experience: </li>
 									<br>
 									<li id ="owner_contact"> Contact: </li>
-									<br>
-									<li id="comments" ><p style="word-wrap:break-word;">Additional Notes: </p></li>
 									<br>
 								</ul>
 							</div>
@@ -118,10 +108,12 @@
 
 				<div class="container" style="text-align:center;height:auto;">
 					
-						<button type="button" id="yes" class="btn btn-default btn-lg control choice" style="margin:0;;margin-right:-15px; text-align:center; " >
-							  <span class="glyphicon glyphicon-envelope"></span> 
+						<button type="button" id="yes" class="btn btn-default btn-lg control choice" style="margin:0; text-align:center; " >
+							  <span class="glyphicon glyphicon-ok"></span> 
 						</button>
-					
+					<button type="button" id="no" class="btn btn-default btn-lg control choice" style="margin:0;margin-left:60px; text-align:center;" >
+							  <span class="glyphicon glyphicon-remove"></span> 
+						</button>
 				
 
 					
@@ -136,10 +128,9 @@
 		<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'>
 		</script>
 
-		<script src="discover-pets.js"></script>
+		<script src="discover-people.js"></script>
 
 		
 
 	</body>
 </html>
-
