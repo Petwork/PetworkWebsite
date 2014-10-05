@@ -33,7 +33,27 @@ body, html{
 	color:lightgray;
 	text-decoration: none;
 }
+#tooltip{
+	visibility:hidden;
 
+}
+
+.update{
+color:black;
+-moz-transition: all 0.2s ease-in;
+    /* WebKit */
+    -webkit-transition: all 0.2s ease-in;
+    /* Opera */
+    -o-transition: all 0.2s ease-in;
+    /* Standard */
+    transition: all 0.2s ease-in;
+    border:0px;
+}
+
+.update:hover{
+color:gray;
+
+}
 
 h1{
 	

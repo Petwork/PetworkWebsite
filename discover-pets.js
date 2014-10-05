@@ -224,6 +224,14 @@ function fetch(){
 		}
 	});
 
+	$("#update-loc").mouseenter(function(event) {
+		$("#tooltip").css("visibility","visible"); 
+	});
+
+	$("#update-loc").mouseleave(function(event) {
+		$("#tooltip").css("visibility","hidden"); 
+	});
+
 				
 });
 	
