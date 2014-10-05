@@ -62,6 +62,7 @@ function fetch(){
 					document.getElementById('owner_name').innerHTML = "<span style='color:lightgray;'> Owner's Name: </span> &nbsp";
 					document.getElementById('owner_contact').innerHTML = "<span style='color:lightgray;'>Contact: </span> &nbsp" + records[current_array[count-2]].contact;
 					document.getElementById('comments').innerHTML = "<span style='color:lightgray;'>Additional Info.:</span> &nbsp" +  records[current_array[count-2]].comments;
+					document.getElementById('user_location').innerHTML = "<span style='color:lightgray;'>Location: </span> &nbsp" +  records[current_array[count-2]].location;
 				}
 				document.getElementById('f'+ count).style.backgroundImage = img_array[current_array[count-2]];
 				document.getElementById('name'+ count).innerHTML = name_array[current_array[count-2]] + ', ' + age_array[current_array[count-2]];
@@ -84,6 +85,7 @@ function fetch(){
 					document.getElementById('owner_name').innerHTML = "<span style='color:lightgray;'> Owner's Name: </span> &nbsp";
 					document.getElementById('owner_contact').innerHTML = "<span style='color:lightgray;'>Contact: </span> &nbsp" + records[current_array[count-1]].contact;
 					document.getElementById('comments').innerHTML = "<span style='color:lightgray;'>Additional Info.:</span> &nbsp" +  records[current_array[count-1]].comments;
+					document.getElementById('user_location').innerHTML = "<span style='color:lightgray;'>Location: </span> &nbsp" +  records[current_array[count-1]].location;
 				}
 				
 				document.getElementById('f'+ count).style.backgroundImage = img_array[current_array[count-1]];
@@ -111,6 +113,7 @@ function fetch(){
 					document.getElementById('owner_name').innerHTML = "<span style='color:lightgray;'> Owner's Name: </span> &nbsp";
 					document.getElementById('owner_contact').innerHTML = "<span style='color:lightgray;'>Contact: </span> &nbsp" + records[current_array[count-1]].contact;
 					document.getElementById('comments').innerHTML = "<span style='color:lightgray;'>Additional Info.:</span> &nbsp" +  records[current_array[count-1]].comments;
+					document.getElementById('user_location').innerHTML = "<span style='color:lightgray;'>Location: </span> &nbsp" +  records[current_array[count-1]].location;
 				}
 				document.getElementById('f'+ count).style.backgroundImage = img_array[current_array[count-1]];
 				document.getElementById('name'+ count).innerHTML = name_array[current_array[count-1]] + ', ' + age_array[current_array[count-1]];
@@ -163,7 +166,7 @@ function fetch(){
 
 					}
 					$("#location").text(""); 
-					$("#location").append("Current location: <span style='text-decoration:underline;'> "+address+"</span>");
+					$("#location").append("Your current location: <span style='text-decoration:underline;'> "+address+"</span>");
 			}
 			});				
 			
@@ -243,7 +246,9 @@ function fetch(){
 	});
 
 	$("#update-loc").click(function(){
-		$.post()
+		$.post("location.php",{location:location},function(data,status){
+    		alert("Successfully updated location");  
+  		});
 	});
 				
 });

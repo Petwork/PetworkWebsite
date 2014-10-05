@@ -1,4 +1,7 @@
 <?
+session_start(); 
+$userid = $_SESSION['userid']; 
+
 
 $username = "root";
 $password = "root";
@@ -29,7 +32,12 @@ for($i=0; $i < $n_rows; $i++)
     $row['comments'] = mysql_result($result, $i, "comments");
     $row['contact'] = mysql_result($result, $i, "contact"); 
     $row['owner_image']= mysql_result($result, $i, "owner_image"); 
+    $row['location'] = mysql_result($result,$i, "location"); 
+    $row['userid'] = mysql_result($result,$i, "user_id"); 
 
+    if($userid == $row['userid']){
+        continue; 
+    }
     array_push($return_arr,$row);
 }
 

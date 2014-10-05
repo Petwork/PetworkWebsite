@@ -153,7 +153,7 @@ function fetch(){
 
 					}
 					$("#location").text(""); 
-					$("#location").append("Current location: <span style='text-decoration:underline;'> "+address+"</span>");
+					$("#location").append("Your current location: <span style='text-decoration:underline;'> "+address+"</span>");
 			}
 			});				
 			

@@ -1,3 +1,8 @@
+<?php
+// Start the session
+session_start();
+$_SESSION['userid'] = 11; 
+?>
 <html>
 	<head>
 		<title>Petwork</title>
@@ -75,6 +80,9 @@
 						<div class="face-cont" id="f2"></div>
 							<div class="face-cont text-center" id="info" > 
 								<ul style="line-height:2em;">
+									<br>
+									<li id="owner_name"> Owner name: </li>
+									<br>
 									<li id="pet_name"> Pet's Name: </li>
 									<br>
 									<li id="pet_type"> Pet Type: </li>
@@ -83,7 +91,7 @@
 									<br>
 									<li id="pet_age"> Pet's Age: </li>
 									<br>
-									<li id="owner_name"> Owner name: </li>
+									<li id="user_location"> Location:  </li>
 									<br>
 									<li id ="owner_contact"> Contact: </li>
 									<br>
