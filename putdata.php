@@ -4,15 +4,22 @@ $password = "root";
 $database = "tindog"; 
 
 
-$pet_age = $_POST["pet_age"];
-$pet_name = $_POST["pet_name"];
-$pet_type = $_POST["pet_type"];
-$pet_breed = $_POST["pet_breed"];
-$comments = $_POST["comments"];
-$contact = $_POST["contact"];
+$pet_age = mysql_real_escape_string($_POST["pet_age"]);
+$pet_name = mysql_real_escape_string($_POST["pet_name"]);
+$pet_type = mysql_real_escape_string($_POST["pet_type"]);
+$pet_breed = mysql_real_escape_string($_POST["pet_breed"]);
+$comments = mysql_real_escape_string($_POST["comments"]);
+$contact =mysql_real_escape_string( $_POST["contact"]);
 
+if($pet_age === "" or $pet_name === "" or $pet_type === "" or $pet_breed === "" or $comments === "" or $contact === "" ){
+	echo("<script>alert('Please fill in every field!');</script>"); 
+  	echo("<script>window.location.href='/form.html';</script>");
+  	die(); 
+
+}
 $owner_image = ($_FILES['user_image']['name']); 
 $pet_image = ($_FILES['pet_image']['name']); 
+
 
 
 $target = 'images/';
