@@ -9,12 +9,31 @@ body, html{
 	margin:0;
 }
 
+
+
 #section1
 {
 	background-color:#f1c40f;
 	height: 100%;
 	width:100%;
 }
+#back{
+	font-size:16px;
+	color:white;
+	text-decoration: none;
+	-moz-transition: all 0.2s ease-in;
+    /* WebKit */
+    -webkit-transition: all 0.2s ease-in;
+    /* Opera */
+    -o-transition: all 0.2s ease-in;
+    /* Standard */
+    transition: all 0.2s ease-in;
+}
+#back:hover{
+	color:lightgray;
+	text-decoration: none;
+}
+
 
 h1{
 	
@@ -240,4 +259,9 @@ h5{
 	margin-top: 80px;
 }
 
+@media(max-width:650px){
+	.homeText{
+		font-size:18px;
+	}
+}
 
