@@ -11,15 +11,24 @@ if(isset($_POST['submitted']))
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US" style ="height:100%">
 <head>
       <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
       <title>Login</title>
       <link rel="STYLESHEET" type="text/css" href="style/fg_membersite.css" />
-      <script type='text/javascript' src='scripts/gen_validatorv31.js'></script>
-</head>
-<body>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
+  <link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
+<script type='text/javascript' src='scripts/gen_validatorv31.js'></script>
+</head>
+<body style="height:100%">
+<div id="header" class = "container-fluid" >
+<h1 style="color:white; font-weight:bold;">PETWORK</h1>
+</div>
+
+  <section style="height:100%;width:100%;background:url(DogCat.jpg);background-size:100% 100%;">
+ 
+<div class="midle">
 <!-- Form Code Start -->
 <div id='fg_membersite'>
 <form id='login' action='<?php echo $fgmembersite->GetSelfScript(); ?>' method='post' accept-charset='UTF-8'>
@@ -69,5 +78,7 @@ Uses the excellent form validation script from JavaScript-coder.com-->
 Form Code End (see html-form-guide.com for more info.)
 -->
 
+</div>
+</section>
 </body>
 </html>

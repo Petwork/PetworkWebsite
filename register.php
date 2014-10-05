@@ -28,13 +28,14 @@ if(isset($_POST['submitted']))
     <script src="scripts/pwdwidget.js" type="text/javascript"></script>      
 </head>
 <body style="height:100%; width=100%;">
-<div id="header" class = "container-fluid" style="background-color:BLACK">
+<div id="header" class = "container-fluid" >
 <h1 style="color:white; font-weight:bold;">PETWORK</h1>
 </div>
 <!--<div class="container fluid">-->
 <!--<section style="height:100%;width:60%;background:url(catDog.jpg);background-size:100% 100%;">
 <section class="overlay-body" style=";height:100%;width:60%;background-color:rgba(0,0,0,0.6); ">-->
     <div class="col-md-8" id = "left">
+        
         <section style="height:100%;width:100%;background:url(DogCat.jpg);background-size:100% 100%;">
 
         <p id ="description">PetWorks is a new social netowrk made specially to connect pet owners who sometimes don't have time to be around their loved pets with people who share their passion for 
