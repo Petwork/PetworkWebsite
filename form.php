@@ -30,6 +30,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse nav-right" id="MainNavbar">
           <ul class="nav navbar-nav navbar-right">
+            <li><p class="navbar-text navbar-right">Signed in as <a href="#" id="person" class="navbar-link" style="text-decoration:none;">PlaceHolder</a></p></li>
       		<li class = "dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" id="navGlyph"><span class="glyphicon glyphicon-comment"></span></a>
 				<ul class="dropdown-menu" role="menu" id="notifications">

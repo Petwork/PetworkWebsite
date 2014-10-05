@@ -18,6 +18,7 @@ $_SESSION['userid'] = 11;
 						<h1 style="display:inline-block;color:white; font-weight:bold;text-align:center;margin-bottom:80px; margin-left:45%;"> Petwork  <span style="font-size:14px; color:lightgray; font-weight:normal;"> Care for pets </span></h1> 
 						
 						<span style="float:right;">
+							<p class="navbar-text" style="color:white;">Signed in as <a href="#" id="person" class="navbar-link" style="text-decoration:none; color:white;">PlaceHolder</a></p>
 							<button type="button" id="menu-drop-but" class="btn btn-default btn-lg menu">
 							  <span  class="glyphicon glyphicon-comment"></span> 
 							  <div id="menu-drop" style="overflow:scroll;">
